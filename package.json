@@ -1,0 +1,28 @@
+{
+  "name": "kioskito",
+  "version": "1.0.0",
+  "description": "Sitio web para emprendimiento Kioskito",
+  "main": "script.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FabioGiacometti/kiosquito.git"
+  },
+  "keywords": [
+    "landing",
+    "Vue",
+    "Tailwind"
+  ],
+  "author": "Fabio Giacometti & Diego Herrera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FabioGiacometti/kiosquito/issues"
+  },
+  "homepage": "https://github.com/FabioGiacometti/kiosquito#readme",
+  "dependencies": {
+    "@tailwindcss/ui": "^0.6.2",
+    "tailwindcss": "^1.9.4"
+  }
+}

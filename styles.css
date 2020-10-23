@@ -1,0 +1,68 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,700&family=Playfair+Display:wght@700;900&display=swap');
+
+:root {
+  --background-color: #53f3db;
+  --title-color: #1d665c;
+  --subtitle-color: #11453e;
+  --text: #061815;
+}
+
+.titulo {
+  font-family: "Playfair Display", serif;
+  font-size: 108px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 116px;
+  letter-spacing: -0.04em;
+  text-align: left;
+  color: var(--title-color)
+}
+
+.subtitulo {
+  font-family: "Playfair Display";
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 63px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--subtitle-color)
+  
+}
+
+.texto {
+  font-family: 'Lato';
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--text)
+}
+
+.texto-resaltado{
+    font-family: 'Lato';
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color:  var(--subtitle-color);
+}
+
+section{
+    height: auto;
+    min-height: 50vh
+}
+
+.odd{
+    background-color: var(--background-color)
+}
