@@ -1,57 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="output.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tailwindcss/ui@latest/dist/tailwind-ui.min.css">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <title>Kioskito</title>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+    href="styles.css">
+  <link rel="stylesheet"
+    href="output.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@tailwindcss/ui@latest/dist/tailwind-ui.min.css">
+  <link rel="stylesheet"
+    href="https://rsms.me/inter/inter.css">
+  <title>Kioskito</title>
 </head>
+
 <body>
   <header>
-    <div class="logo"></div>
+    <div class="logo"><a href="#hero"><img src="assets/logo.svg" alt="Logo de Kioskito"></a></div>
     <nav>
       <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li><a href="#propuesta">Propuesta</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contactanos">Contactanos</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <section class="hero odd" style="background-color: red;">
-      <h1 class="titulo"></h1>
-      <h2 class="subtitle"></h2>
-      <p class="texto"></p>
-      <img src="" alt="">
+    <section id="hero" class="hero odd">
+      <h1 class="titulo">¡Hola!</h1>
+      <h2 class="subtitulo">¡Queremos ayudar a tu negocio!</h2>
+      <p class="texto">Somos un equipo de profesionales digitales que ayudamos a empresas de todos los tamaños a
+        digitalizarse para sumar ventas y llegar a más clientes.</p>
+      <button>¡Quiero Saber Mas!</button>
+      <img src="assets/imagenes/hero.png"
+        alt="hero image">
     </section>
-    <section class="propuesta">
-      <h2 class="subtitle"></h2>
-      <p class="texto"></p>
-      <img src="" alt="">
+    <section id="propuesta"
+      class="propuesta">
+      <h2 class="subtitulo">Nuestra
+        Propuesta</h2>
+      <p class="texto">Nuestro objetivo es facilitar el proceso de transformacion digital de tu emprendimiento, mediante
+        productos “enlatados” que resuelvan esta integracion con las principales plataformas de presencia en la red,
+        acompañandote en el proceso de adopcion de estas tecnologias.
+
+        De esta forma podes aprovechar este canal para hacer crecer tu negocio, y nosotros estamos para ayudarte a hacer
+        ese paso de la manera mas facil y conveniente, con planes y productos adaptados a tus necesidades.</p>
+      <img src="assets/imagenes/propuesta.png"
+        alt="propuesta pionera">
     </section>
-    <section class="productos odd">
-      <h2 class="subtitle"></h2>
-      <p class="texto"></p>
-      <img src="" alt="">
+    <section id="productos"class="productos odd">
+      <h2 class="subtitulo">Nuestos Productos</h2>
+      <p class="texto">Hemos curado estos combinados de servicios para que encuentres entre ellos uno que satisfaga la
+        necesidad de presencia online de tu emprendimiento</p>
+      <img src="assets/imagenes/productos.png"
+        alt="nuestros productos">
+      <table>
+        <table>
+          <tbody>
+            <!--Header de la tabla  -->
+            <tr>
+              <th>
+                <h3 class="table-header-title">
+                  Prestaciónes
+                </h3>
+              </th>
+              <th>
+                <img src="assets/imagenes/starter.png" alt="">
+                <h3 class="table-header-title">Starter</h3>
+                <h4 class="table-header-subtitulo">$50.000</h4>
+              </th>
+              <th>
+                <img src="assets/imagenes/pro.png" alt="">
+                <h3 class="table-header-title">Pro</h3>
+                <h4 class="table-header-subtitulo">$100.000</h4>
+              </th>
+              <th>
+                <img src="assets/imagenes/senior.png" alt="">
+                <h3 class="table-header-title">Senior</h3>
+                <h4 class="table-header-subtitulo">$100.000
+                  <br>
+                  + Cuota mensual
+                </h4>
+              </th>
+            </tr>
+            <!-- Row 1 -->
+            <tr>
+              <td>Diseño de marca e identidad corporativa</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <!-- Row 2 -->
+            <tr>
+              <td>Diseño Web (Con SEO incluido) con 1 año de hosting incluido</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <!-- Row 3 -->
+            <tr>
+              <td>Creacion de perfiles y plantillas para redes sociales.</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <!-- Row 4 -->
+            <tr>
+              <td>Reporte mensual de Trafico y actividad en el sitio para toma de desiciones.</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <!-- Row 5 -->
+            <tr>
+              <td>Publicidad en Facebook, Twitter, Linkedin y Youtube</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <!-- Row 6 -->
+            <tr>
+              <td>Gestion de portales genericos y especificos (inmobiliarios,gastronomicos, turisticos, etc). </td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </table>
     </section>
-    <section class="servicios">
-      <h2 class="subtitle"></h2>
-      <p class="texto"></p>
-      <img src="" alt="">
+    <section id="servicios"class="servicios">
+      <h2 class="subtitulo">Nuestos Servicios</h2>
+      <p class="texto">Si necesitas una solucion a tu medida, te ofrecemos todas nuestras herramientas para mantener tu presencia digital gestionada de forma unificada y coherente. Diseñamos y administramos tu web o E-Commerce, publicidad en facebook, twitter,portales (Mercadolibre, Olx, foros), y E-mail Marketing</p>
+      <button>Saber Mas</button>
+      <img src="assets/imagenes/servicios.png"
+        alt=" nuestros servicios">
     </section>
-    <section class="nosotros odd">
-      <h2 class="subtitle"></h2>
-      <p class="texto"></p>
-      <img src="" alt="">
+    <section id="nosotros" class="nosotros odd">
+      <h2 class="subtitulo">Quienes
+        Somos</h2>
+      <p class="texto">Somos un equipo de pibes copados y todo lo que podamos decir de lindo sobre nosotros 
+        <br>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nostrum illo ab unde, velit cum praesentium facere suscipit vitae ullam nisi repellendus in ipsam officia odio veniam. Obcaecati, iste dicta!</p>
+      <img src="assets/imagenes/nosotros.png"
+        alt="nuestra imagen">
     </section>
-    <section class="contacto"></section>
+    <section id="contacto" class="contacto">
+      <h2 class="subtitulo">Dejanos tus datos
+        y te contactamos!</h2>
+        <form action="">
+          <fieldset>
+            <input type="text">
+            <input type="text">
+            <input type="text">
+            <button></button>
+          </fieldset>
+        </form>
+    </section>
     <footer></footer>
-  </main>  
+  </main>
   <script src="script.js"></script>
 </body>
+
 </html>
