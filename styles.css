@@ -60,9 +60,20 @@
 
 section{
     height: auto;
-    min-height: 50vh
+    min-height: 50vh;
+    flex-direction: row-reverse;
+    align-items: center;
 }
 
 .odd{
-    background-color: var(--background-color)
+    background-color: var(--background-color);
+    flex-direction: row;
+}
+
+header{
+  background-color: var(--background-color);
+}
+
+nav li a{
+  margin-right: 10px
 }
