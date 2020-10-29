@@ -33,9 +33,14 @@
   letter-spacing: 0em;
   text-align: left;
   color: var(--subtitle-color)
-  
-}
 
+
+}
+.nuestros-productos{
+  padding-top: 158px;
+  padding-left: 137px;      
+}
+  
 .texto {
   font-family: 'Lato';
   font-size: 17px;
@@ -45,6 +50,23 @@
   letter-spacing: 0em;
   text-align: left;
   color: var(--text)
+}
+#productos{
+  padding-bottom:80px;
+}
+#productos article p.texto {
+  max-width: 537px;
+  padding-left:135px;
+  padding-top: 34px;
+
+}
+
+.wrappper-productos{
+  display:flex;
+}
+
+.wrappper-productos img{
+  padding-right:218px;
 }
 
 .texto-resaltado{
@@ -57,6 +79,27 @@
     text-align: left;
     color:  var(--subtitle-color);
 }
+
+#productos table{
+  background:white;
+}
+
+tr td:not(:first-child){
+  border-left:1px solid  lightgrey;
+  border-right:1px solid lightgrey;
+}
+
+}
+
+th.titulo-card{
+  width: 228px;
+}
+
+#productos table td{
+  height: 62px;
+}
+
+
 
 section{
     height: auto;
