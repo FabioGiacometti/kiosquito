@@ -23,11 +23,11 @@
       <a href="#hero"><img src="assets/logo.svg"
           alt="Logo de Kioskito"></a>
       <ul class="flex flex-col md:flex-row">
-        <li><a href="#propuesta">Propuesta</a></li>
-        <li><a href="#productos">Productos</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#contactanos">Contactanos</a></li>
+        <li><a class="header-link" href="#propuesta">Propuesta</a></li>
+        <li><a class="header-link" href="#productos">Productos</a></li>
+        <li><a class="header-link" href="#servicios">Servicios</a></li>
+        <li><a class="header-link" href="#nosotros">Nosotros</a></li>
+        <li><a class="header-link" href="#contactanos">Contactanos</a></li>
       </ul>
     </nav>
   </header>
@@ -71,7 +71,7 @@
       class="productos odd">
       <div class="contained">
         <article class="flex flex-col">
-          <h2 class="subtitulo nuestros-productos">Nuestos Productos</h2>
+          <h2 class="subtitulo">Nuestros Productos</h2>
           <p class="texto">Hemos curado estos combinados de servicios para que encuentres entre ellos uno que satisfaga
             la
             necesidad de presencia online de tu emprendimiento</p>
@@ -79,8 +79,6 @@
         <img src="assets/imagenes/productos.png"
           alt="nuestros productos">
       </div>
-
-
 
       <table class="mx-auto">
         <tbody>
@@ -91,7 +89,7 @@
                 Prestaciónes
               </h3>
             </th>
-            <th class="titulo-card  gris">
+            <th class="titulo-card ">
               <img src="assets/imagenes/starter.png"
                 alt="">
               <h3 class="table-header-title">Starter</h3>
@@ -103,7 +101,7 @@
               <h3 class="table-header-title">Pro</h3>
               <h4 class="table-header-subtitulo">$100.000</h4>
             </th>
-            <th class="titulo-card gris">
+            <th class="titulo-card">
               <img src="assets/imagenes/senior.png"
                 alt="">
               <h3 class="table-header-title">Senior</h3>
@@ -116,44 +114,44 @@
           <!-- Row 1 -->
           <tr>
             <td>Diseño de marca e identidad corporativa</td>
-            <td class="gris"></td>
+            <td class="></td>
             <td></td>
-            <td class="gris"></td>
+            <td class="></td>
           </tr>
           <!-- Row 2 -->
           <tr>
             <td>Diseño Web (Con SEO incluido) con 1 año de hosting incluido</td>
-            <td class="gris"></td>
+            <td class="></td>
             <td></td>
-            <td class="gris"></td>
+            <td class="></td>
           </tr>
           <!-- Row 3 -->
           <tr>
             <td>Creacion de perfiles y plantillas para redes sociales.</td>
-            <td class="gris"></td>
+            <td class="></td>
             <td></td>
-            <td class="gris"></td>
+            <td class="></td>
           </tr>
           <!-- Row 4 -->
           <tr>
             <td>Reporte mensual de Trafico y actividad en el sitio para toma de desiciones.</td>
-            <td class="gris"></td>
+            <td class="></td>
             <td></td>
-            <td class="gris"></td>
+            <td class="></td>
           </tr>
           <!-- Row 5 -->
           <tr>
             <td>Publicidad en Facebook, Twitter, Linkedin y Youtube</td>
-            <td class="gris"></td>
+            <td class="></td>
             <td></td>
-            <td class="gris"></td>
+            <td class="></td>
           </tr>
           <!-- Row 6 -->
           <tr>
             <td>Gestion de portales genericos y especificos (inmobiliarios,gastronomicos, turisticos, etc). </td>
-            <td class="gris"></td>
+            <td class="></td>
             <td></td>
-            <td class="gris"></td>
+            <td class="></td>
           </tr>
         </tbody>
       </table>
@@ -176,7 +174,7 @@
     </section>
 
     <section id="nosotros"
-      class="nosotros odd flex">
+      class="nosotros odd">
       <div class="contained">
         <article class="flex flex-col">
 
@@ -189,6 +187,23 @@
         <img src="assets/imagenes/nosotros.png"
           alt="nuestra imagen">
       </div>
+      <ul id="gallery" class="gallery">
+        <li v-for="integrante in integrantes" class="quien-card">
+          <img :src="integrante.imagen" alt="avatar" class="card-avatar">
+          <h3 class="card-nombre">
+            {{ integrante.nombre }}
+          </h3>
+          <h4 class="card-titulo">
+            {{ integrante.titulo }}
+          </h4>
+            <p class="card-texto">
+              {{ integrante.texto }}
+            </p>
+            <div class="icon-container">
+              <a :href="integrante.linkedin"><img src="assets/imagenes/linkedin.png" alt="" class="card-social"></a>
+            </div>
+        </li>
+      </ul>
     </section>
 
     <section id="contacto"
