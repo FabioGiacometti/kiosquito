@@ -18,8 +18,8 @@
 </head>
 
 <body>
-  <header class="flex justify-center items-center w-full">
-    <nav class="flex justify-between w-full">
+  <header class="headear flex justify-center items-center w-full">
+    <nav class="nav contained flex justify-between w-full">
       <a href="#hero"><img src="assets/logo.svg"
           alt="Logo de Kioskito"></a>
       <ul class="flex flex-col md:flex-row">
@@ -35,37 +35,41 @@
   <main>
     <section id="hero"
       class="hero odd flex flex-col-reverse items-center md:flex-row">
-      <article>
-        <h1 class="titulo">¡Hola!</h1>
-        <h2 class="subtitulo">¡Queremos ayudar a tu negocio!</h2>
-        <p class="texto">Somos un equipo de profesionales digitales que ayudamos a empresas de todos los tamaños a
-          digitalizarse para sumar ventas y llegar a más clientes.</p>
-        <button>¡Quiero Saber Mas!</button>
-      </article>
-      <img src="assets/imagenes/hero.png"
-        alt="hero image">
+      <div class="contained">
+        <article class="article">
+          <h1 class="titulo">¡Hola!</h1>
+          <h2 class="subtitulo">¡Queremos ayudar a tu negocio!</h2>
+          <p class="texto">Somos un equipo de profesionales digitales que ayudamos a empresas de todos los tamaños a
+            digitalizarse para sumar ventas y llegar a más clientes.</p>
+          <button>¡Quiero Saber Mas!</button>
+        </article>
+        <img src="assets/imagenes/hero.png"
+          alt="hero image">
+      </div>
     </section>
 
     <section id="propuesta"
       class="propuesta flex flex-row-reverse">
-      <article>
-        <h2 class="subtitulo">Nuestra
-          Propuesta</h2>
-        <p class="texto">Nuestro objetivo es facilitar el proceso de transformacion digital de tu emprendimiento,
-          mediante
-          productos “enlatados” que resuelvan esta integracion con las principales plataformas de presencia en la red,
-          acompañandote en el proceso de adopcion de estas tecnologias.
+      <div class="contained">
+        <article class="">
+          <h2 class="subtitulo">Nuestra
+            Propuesta</h2>
+          <p class="texto">Nuestro objetivo es facilitar el proceso de transformacion digital de tu emprendimiento,
+            mediante
+            productos “enlatados” que resuelvan esta integracion con las principales plataformas de presencia en la red,
+            acompañandote en el proceso de adopcion de estas tecnologias.
 
-          De esta forma podes aprovechar este canal para hacer crecer tu negocio, y nosotros estamos para ayudarte a
-          hacer
-          ese paso de la manera mas facil y conveniente, con planes y productos adaptados a tus necesidades.</p>
-      </article>
-      <img src="assets/imagenes/propuesta.png"
-        alt="propuesta pionera">
+            De esta forma podes aprovechar este canal para hacer crecer tu negocio, y nosotros estamos para ayudarte a
+            hacer
+            ese paso de la manera mas facil y conveniente, con planes y productos adaptados a tus necesidades.</p>
+        </article>
+        <img src="assets/imagenes/propuesta.png"
+          alt="propuesta pionera">
+      </div>
     </section>
     <section id="productos"
       class="productos odd">
-      <div class="wrappper-productos">
+      <div class="contained">
         <article class="flex flex-col">
           <h2 class="subtitulo nuestros-productos">Nuestos Productos</h2>
           <p class="texto">Hemos curado estos combinados de servicios para que encuentres entre ellos uno que satisfaga
@@ -157,25 +161,31 @@
 
     <section id="servicios"
       class="servicios flex">
-      <article>
-        <h2 class="subtitulo">Nuestos Servicios</h2>
-        <p class="texto">Si necesitas una solucion a tu medida, te ofrecemos todas nuestras herramientas para mantener
-          tu presencia digital gestionada de forma unificada y coherente. Diseñamos y administramos tu web o E-Commerce,
-          publicidad en facebook, twitter,portales (Mercadolibre, Olx, foros), y E-mail Marketing</p>
-        <button>Saber Mas</button>
-      </article>
-      <img src="assets/imagenes/servicios.png"
-        alt=" nuestros servicios">
+      <div class="contained">
+        <article class="">
+          <h2 class="subtitulo">Nuestos Servicios</h2>
+          <p class="texto">Si necesitas una solucion a tu medida, te ofrecemos todas nuestras herramientas para mantener
+            tu presencia digital gestionada de forma unificada y coherente. Diseñamos y administramos tu web o
+            E-Commerce,
+            publicidad en facebook, twitter,portales (Mercadolibre, Olx, foros), y E-mail Marketing</p>
+          <button>Saber Mas</button>
+        </article>
+        <img src="assets/imagenes/servicios.png"
+          alt=" nuestros servicios">
+      </div>
     </section>
 
     <section id="nosotros"
       class="nosotros odd flex">
-      <div class="flex">
-        <h2 class="subtitulo">Quienes
-          Somos</h2>
-        <p class="texto">Somos un equipo de pibes copados y todo lo que podamos decir de lindo sobre nosotros
-          <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nostrum illo ab unde, velit cum praesentium
-          facere suscipit vitae ullam nisi repellendus in ipsam officia odio veniam. Obcaecati, iste dicta!</p>
+      <div class="contained">
+        <article class="flex flex-col">
+
+          <h2 class="subtitulo">Quienes
+            Somos</h2>
+          <p class="texto">Somos un equipo de pibes copados y todo lo que podamos decir de lindo sobre nosotros
+            <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nostrum illo ab unde, velit cum praesentium
+            facere suscipit vitae ullam nisi repellendus in ipsam officia odio veniam. Obcaecati, iste dicta!</p>
+        </article>
         <img src="assets/imagenes/nosotros.png"
           alt="nuestra imagen">
       </div>

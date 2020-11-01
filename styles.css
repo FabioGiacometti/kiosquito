@@ -33,14 +33,27 @@
   letter-spacing: 0em;
   text-align: left;
   color: var(--subtitle-color)
+}
 
+article{
+  max-width: 600px;
 
 }
+
+.contained{
+  max-width: 1366px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .nuestros-productos{
   padding-top: 158px;
   padding-left: 137px;      
 }
-  
+
+
 .texto {
   font-family: 'Lato';
   font-size: 17px;
@@ -51,14 +64,15 @@
   text-align: left;
   color: var(--text)
 }
+
 #productos{
   padding-bottom:80px;
 }
+
 #productos article p.texto {
   max-width: 537px;
   padding-left:135px;
   padding-top: 34px;
-
 }
 
 .wrappper-productos{
@@ -89,7 +103,6 @@ tr td:not(:first-child){
   border-right:1px solid lightgrey;
 }
 
-}
 
 th.titulo-card{
   width: 228px;
@@ -110,7 +123,7 @@ section{
 
 .odd{
     background-color: var(--background-color);
-    flex-direction: row;
+    flex-direction: row-reverse;
 }
 
 header{
