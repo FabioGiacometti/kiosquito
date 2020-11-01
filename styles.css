@@ -120,3 +120,37 @@ header{
 nav li a{
   margin-right: 10px
 }
+/* 
+table{
+  transform: rotate(90deg);
+} */
+/* 
+table, td{
+  position: relative;
+}
+
+table td::after{
+  content: "";
+  position: absolute;
+  height: inherit;
+  width: 2px;
+  background-color: black;
+  right: 0;
+  top: 0;
+  filter: blur(2px);
+} */
+
+td{
+  border: none!important;
+}
+
+tr{
+  box-shadow: 2px 2px 0 0 black;
+  position: relative;
+}
+
+.gris{
+  background-color: gray;
+  opacity: .5
+  ;
+}
