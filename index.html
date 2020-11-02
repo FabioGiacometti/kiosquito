@@ -14,6 +14,8 @@
     href="https://cdn.jsdelivr.net/npm/@tailwindcss/ui@latest/dist/tailwind-ui.min.css">
   <link rel="stylesheet"
     href="https://rsms.me/inter/inter.css">
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
   <title>Kioskito</title>
 </head>
 
@@ -34,14 +36,14 @@
 
   <main>
     <section id="hero"
-      class="hero odd flex flex-col-reverse items-center md:flex-row">
-      <div class="contained">
+      class="hero  flex flex-col-reverse items-center md:flex-row">
+      <div class="contained odd">
         <article class="article">
           <h1 class="titulo">¡Hola!</h1>
           <h2 class="subtitulo">¡Queremos ayudar a tu negocio!</h2>
           <p class="texto">Somos un equipo de profesionales digitales que ayudamos a empresas de todos los tamaños a
             digitalizarse para sumar ventas y llegar a más clientes.</p>
-          <button>¡Quiero Saber Mas!</button>
+          <button class="button button-odd" onclick="Email.send()">¡Quiero Saber Mas!</button>
         </article>
         <img src="assets/imagenes/hero.png"
           alt="hero image">
@@ -68,8 +70,8 @@
       </div>
     </section>
     <section id="productos"
-      class="productos odd">
-      <div class="contained">
+      class="productos ">
+      <div class="contained odd">
         <article class="flex flex-col">
           <h2 class="subtitulo">Nuestros Productos</h2>
           <p class="texto">Hemos curado estos combinados de servicios para que encuentres entre ellos uno que satisfaga
@@ -166,7 +168,7 @@
             tu presencia digital gestionada de forma unificada y coherente. Diseñamos y administramos tu web o
             E-Commerce,
             publicidad en facebook, twitter,portales (Mercadolibre, Olx, foros), y E-mail Marketing</p>
-          <button>Saber Mas</button>
+          <button class="button button-even">Saber Mas</button>
         </article>
         <img src="assets/imagenes/servicios.png"
           alt=" nuestros servicios">
@@ -174,8 +176,8 @@
     </section>
 
     <section id="nosotros"
-      class="nosotros odd">
-      <div class="contained">
+      class="nosotros ">
+      <div class="contained odd">
         <article class="flex flex-col">
 
           <h2 class="subtitulo">Quienes

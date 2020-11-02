@@ -8,12 +8,16 @@
 
 :root {
   --background-color: #53f3db;
+  --background-tilt: #49dbc5;
   --title-color: #1d665c;
   --subtitle-color: #11453e;
   --text: #061815;
   --margin: 10px;
   --shadow-normal: 0 5px 2px 3px #00000013;
+}
 
+*, html {
+  scroll-behavior: smooth;
 }
 
 .titulo {
@@ -42,12 +46,17 @@ article {
   max-width: 600px;
 }
 
+.odd {
+  flex-direction: row-reverse;
+}
+
 .contained {
   max-width: 900px;
   display: flex;
   align-items: center;
   margin: auto;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .texto {
@@ -72,8 +81,8 @@ article {
   text-align: left;
   color: var(--subtitle-color);
 }
-.header-link{
-  color:var(--text);
+.header-link {
+  color: var(--text);
   font-size: 0.9rem;
 }
 
@@ -101,17 +110,40 @@ section {
   align-items: center;
 }
 
-.odd {
-  background-color: var(--background-color);
-}
-
 header {
   background-color: var(--background-color);
 }
 
 nav li a {
   margin-right: 10px;
+  position: relative;
+  transition: all 200ms;
 }
+
+nav li a::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 0%;
+  left: 50%;
+  bottom: -6px;
+  background-color: var(--background-tilt);
+  transition: all 200ms;
+}
+
+nav li a:hover {
+  color: var(--title-color);
+}
+
+nav li a:hover::after {
+  width: 100%;
+  left: 0%;
+}
+
+section:nth-of-type(odd) {
+  background-color: var(--background-color);
+}
+
 /* 
 table{
   transform: rotate(90deg);
@@ -161,10 +193,10 @@ td {
   align-items: start;
   box-shadow: 0 0 2px 1px #00000025;
   transform: translateY(0px);
-  transition: all 200ms ;
+  transition: all 200ms;
 }
 
-.quien-card:hover{
+.quien-card:hover {
   box-shadow: var(--shadow-normal);
   transform: translateY(-2px);
 }
@@ -220,3 +252,29 @@ td {
   align-items: flex-end;
   height: -webkit-fill-available;
 }
+
+.button {
+  padding: 8px 16px;
+  margin-top: calc(var(--margin) * 2);
+  border-radius: 4px;
+  transform: translateY(0px);
+  transition: all 200ms;
+  font-weight: bold;
+}
+.button:hover {
+  box-shadow: var(--shadow-normal);
+  transform: translateY(-2px);
+}
+
+.button-odd{
+  color: var(--subtitle-color);
+  box-shadow: 0 0 2px 1px #00000025;
+  background-color: white;
+}
+
+.button-even{
+  color: white;
+  box-shadow: 0 0 2px 1px #00000025;
+  background-color: var(--background-tilt);
+}
+

@@ -25,3 +25,16 @@ var gallery = new Vue({
     ],
   },
 })
+
+
+Email.send({
+    Host : "smtp.gmail.com",
+    Username : "",
+    Password : "",
+    To : 'dactilarcv@gmail.com',
+    From : "fabiog.inbox@gmail.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
