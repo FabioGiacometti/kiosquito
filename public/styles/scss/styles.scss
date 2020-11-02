@@ -1,3 +1,7 @@
+body{
+    background-color: red;
+}
+
 @tailwind base;
 
 @tailwind components;
@@ -53,6 +57,9 @@
 }
 #productos{
   padding-bottom:80px;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
 }
 #productos article p.texto {
   max-width: 537px;
@@ -82,30 +89,89 @@
 
 #productos table{
   background:white;
+  width: 90%;
+}
+td{
+  padding:0px 20px;
 }
 
-tr td:not(:first-child){
-  border-left:1px solid  lightgrey;
-  border-right:1px solid lightgrey;
+table{
+  position:relative;
+  overflow: hidden;
 }
 
+td{
+  padding: 12px 20px;
 }
+
+tr, td{
+  position: relative;
+ 
+}
+.titulo-card{
+  text-align: center;
+  padding-top:10px;
+}
+
+.titulo-card img{
+  display: inline;
+  padding-top: 20px;
+}
+
+
+td::before {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 112%;
+    left: -2px;
+    box-shadow: 3px 0px 6px -4px rgba( 0, 0, 0, 0.3 );
+    top:0px;
+    bottom: 0px;
+}
+
+
+/*se aplica al ultimo row de la tabla*/
+ tbody > tr:nth-child(7) > td:nth-child(1){
+   padding-bottom: 35px;
+ }
+
+
+
+
+
+
+  
 
 th.titulo-card{
   width: 228px;
 }
 
-#productos table td{
-  height: 62px;
+
+tr th::after{
+  content: '';
+  width: 100%;
+  position: absolute;
+  height: 112%;
+  left: -2px;
+  box-shadow: 3px 0px 6px -4px rgba( 0, 0, 0, 0.3 );
+  top:0px;
+  bottom: 0px;
 }
 
 
 
 section{
     height: auto;
-    min-height: 50vh
+    min-height: 50vh;
 }
 
 .odd{
     background-color: var(--background-color)
+}
+
+
+
+tbody tr:nth-child(odd) {
+  background: #E8E8E8;
 }

@@ -4,7 +4,10 @@
   "description": "Sitio web para emprendimiento Kioskito",
   "main": "script.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "compile:sass": "node-sass public/styles/scss/styles.scss public/styles/css/styles.css",
+    "scss": "node-sass --watch public/styles/scss/styles.scss -o public/styles/css/styles.css",
+    "start": "live-server public & npm run scss"
   },
   "repository": {
     "type": "git",
@@ -25,5 +28,9 @@
     "@tailwindcss/ui": "^0.6.2",
     "react-scripts": "^4.0.0",
     "tailwindcss": "^1.9.4"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "node-sass": "^5.0.0"
   }
 }
