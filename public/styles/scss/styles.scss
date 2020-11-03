@@ -8,15 +8,19 @@
   --text: #061815;
   --margin: 10px;
   --shadow-normal: 0 5px 2px 3px #00000013;
+  --title-font: "Playfair Display";
+  --text-font: "Lato";
 }
 
 *,
-html {
+html,
+body {
   scroll-behavior: smooth;
+  position: relative;
 }
 
 .titulo {
-  font-family: "Playfair Display", serif;
+  font-family: var(--title-font), serif;
   font-size: 108px;
   font-style: normal;
   font-weight: 900;
@@ -27,7 +31,7 @@ html {
 }
 
 .subtitulo {
-  font-family: "Playfair Display";
+  font-family: var(--title-font);
   font-size: 72px;
   font-style: normal;
   font-weight: 700;
@@ -55,7 +59,7 @@ article {
 }
 
 .texto {
-  font-family: "Lato";
+  font-family: var(--text-font);
   font-size: 17px;
   font-style: normal;
   font-weight: 300;
@@ -76,9 +80,59 @@ article {
   text-align: left;
   color: var(--subtitle-color);
 }
+
+.menu-button {
+  display: none!important;
+  position: absolute;
+  top: 0;
+  right: 30px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+
+header {
+  @media (max-width: 850px) {
+    .hidden {
+      transform: translateX(100vw);
+    }
+    .menu-button{
+      display: block!important;
+    }
+    nav {
+      // position: relative;
+      width: 100vw;
+      height: calc(100vh - 60px);
+      position: fixed;
+      justify-content: flex-start !important;
+      bottom: 0;
+      right: 0%;
+      flex-direction: column;
+      background-color: var(--background-color);
+      z-index: 100;
+      transform: translateX(0vw);
+      transition: transform 300ms ease-in-out;
+      .logo {
+        margin: 50px;
+      }
+      ul {
+        margin: 50px auto !important;
+        // justify-content: space-evenly;
+        text-align: center;
+      }
+
+      .header-link {
+        font-size: 30px;
+      }
+    }
+  }
+}
 .header-link {
   color: var(--text);
   font-size: 0.9rem;
+  font-family: var(--text-font);
 }
 
 #productos table {
@@ -104,10 +158,6 @@ tr td:not(:first-child) {
     height: 62px;
   }
 
-  #productos table {
-    background: white;
-    width: 90%;
-  }
   td {
     padding: 0px 20px;
   }
@@ -115,6 +165,8 @@ tr td:not(:first-child) {
   table {
     position: relative;
     overflow: hidden;
+    max-width: 80vw;
+    border-radius: 15px;
   }
 
   td {
@@ -141,7 +193,7 @@ tr td:not(:first-child) {
     position: absolute;
     height: 112%;
     left: -2px;
-    box-shadow: 3px 0px 6px -4px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 0px 6px -7px rgba(0, 0, 0, 0.5);
     top: 0px;
     bottom: 0px;
   }
@@ -186,15 +238,28 @@ section {
 
 header {
   background-color: var(--background-color);
+  position: relative;
 }
 
 nav li a {
   margin-right: 10px;
   position: relative;
   transition: all 200ms;
-}
-nav li a:hover {
-  color: var(--title-color);
+
+  &::after {
+    content: "";
+    height: 1px;
+    width: 0%;
+    position: absolute;
+    bottom: -5px;
+    background-color: var(--title-color);
+    left: 50%;
+    transition: all 200ms;
+  }
+
+  &:hover {
+    color: var(--title-color);
+  }
 }
 
 nav li a:hover::after {
@@ -350,4 +415,40 @@ tbody tr:nth-child(odd) {
   color: white;
   box-shadow: 0 0 2px 1px #00000025;
   background-color: var(--background-tilt);
+}
+
+.text-field {
+  border: 1px solid var(--background-tilt);
+  display: block;
+  margin-top: var(--margin);
+  width: 300px;
+  padding: 7px 13px;
+  border-radius: 6px;
+
+  &:focus {
+    outline: none;
+    border: 2px solid var(--background-tilt);
+    box-shadow: 0 0 3px 1px var(--background-color);
+  }
+
+  &::placeholder {
+    color: var(--subtitle-color);
+  }
+}
+
+.footer {
+  background-color: var(--title-color);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  padding: 20px;
+  img {
+    filter: invert(1);
+  }
+  ul {
+    display: block;
+    li a {
+      color: white;
+    }
+  }
 }

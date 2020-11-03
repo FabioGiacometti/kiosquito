@@ -6,14 +6,18 @@
   --subtitle-color: #11453e;
   --text: #061815;
   --margin: 10px;
-  --shadow-normal: 0 5px 2px 3px #00000013; }
+  --shadow-normal: 0 5px 2px 3px #00000013;
+  --title-font: "Playfair Display";
+  --text-font: "Lato"; }
 
 *,
-html {
-  scroll-behavior: smooth; }
+html,
+body {
+  scroll-behavior: smooth;
+  position: relative; }
 
 .titulo {
-  font-family: "Playfair Display", serif;
+  font-family: var(--title-font), serif;
   font-size: 108px;
   font-style: normal;
   font-weight: 900;
@@ -23,7 +27,7 @@ html {
   color: var(--title-color); }
 
 .subtitulo {
-  font-family: "Playfair Display";
+  font-family: var(--title-font);
   font-size: 72px;
   font-style: normal;
   font-weight: 700;
@@ -47,7 +51,7 @@ article {
   align-items: flex-start; }
 
 .texto {
-  font-family: "Lato";
+  font-family: var(--text-font);
   font-size: 17px;
   font-style: normal;
   font-weight: 300;
@@ -67,9 +71,43 @@ article {
   text-align: left;
   color: var(--subtitle-color); }
 
+.menu-button {
+  display: none !important;
+  position: absolute;
+  top: 0;
+  right: 30px; }
+  .menu-button:focus {
+    outline: none; }
+
+@media (max-width: 850px) {
+  header .hidden {
+    transform: translateX(100vw); }
+  header .menu-button {
+    display: block !important; }
+  header nav {
+    width: 100vw;
+    height: calc(100vh - 60px);
+    position: fixed;
+    justify-content: flex-start !important;
+    bottom: 0;
+    right: 0%;
+    flex-direction: column;
+    background-color: var(--background-color);
+    z-index: 100;
+    transform: translateX(0vw);
+    transition: transform 300ms ease-in-out; }
+    header nav .logo {
+      margin: 50px; }
+    header nav ul {
+      margin: 50px auto !important;
+      text-align: center; }
+    header nav .header-link {
+      font-size: 30px; } }
+
 .header-link {
   color: var(--text);
-  font-size: 0.9rem; }
+  font-size: 0.9rem;
+  font-family: var(--text-font); }
 
 #productos table {
   background: white; }
@@ -88,14 +126,13 @@ tr td:not(:first-child) {
     width: 228px; }
   #productos #productos table td {
     height: 62px; }
-  #productos #productos table {
-    background: white;
-    width: 90%; }
   #productos td {
     padding: 0px 20px; }
   #productos table {
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    max-width: 80vw;
+    border-radius: 15px; }
   #productos td {
     padding: 12px 20px; }
   #productos tr,
@@ -113,7 +150,7 @@ tr td:not(:first-child) {
     position: absolute;
     height: 112%;
     left: -2px;
-    box-shadow: 3px 0px 6px -4px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 0px 6px -7px rgba(0, 0, 0, 0.5);
     top: 0px;
     bottom: 0px; }
   #productos tbody > tr:nth-child(7) > td:nth-child(1) {
@@ -146,15 +183,24 @@ section {
   align-items: center; }
 
 header {
-  background-color: var(--background-color); }
+  background-color: var(--background-color);
+  position: relative; }
 
 nav li a {
   margin-right: 10px;
   position: relative;
   transition: all 200ms; }
-
-nav li a:hover {
-  color: var(--title-color); }
+  nav li a::after {
+    content: "";
+    height: 1px;
+    width: 0%;
+    position: absolute;
+    bottom: -5px;
+    background-color: var(--title-color);
+    left: 50%;
+    transition: all 200ms; }
+  nav li a:hover {
+    color: var(--title-color); }
 
 nav li a:hover::after {
   width: 100%;
@@ -290,3 +336,30 @@ tbody tr:nth-child(odd) {
   color: white;
   box-shadow: 0 0 2px 1px #00000025;
   background-color: var(--background-tilt); }
+
+.text-field {
+  border: 1px solid var(--background-tilt);
+  display: block;
+  margin-top: var(--margin);
+  width: 300px;
+  padding: 7px 13px;
+  border-radius: 6px; }
+  .text-field:focus {
+    outline: none;
+    border: 2px solid var(--background-tilt);
+    box-shadow: 0 0 3px 1px var(--background-color); }
+  .text-field::placeholder {
+    color: var(--subtitle-color); }
+
+.footer {
+  background-color: var(--title-color);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  padding: 20px; }
+  .footer img {
+    filter: invert(1); }
+  .footer ul {
+    display: block; }
+    .footer ul li a {
+      color: white; }
