@@ -38,20 +38,18 @@ var gallery = new Vue({
   },
 });
 
-// Email.send({
+Email.send({
 
-  //hay que hacer funcionar el secureToken que provee smtpjs.com.
-  //ingresando el host, user y pass me dio "54458174-51c0-424f-a73e-ca40b83400c9" 
+  // hay que hacer funcionar el secureToken que provee smtpjs.com.
+  // ingresando el host, user y pass me dio "54458174-51c0-424f-a73e-ca40b83400c9" 
   // pero asi no me envia el mail
   
-//   Host: "smtp.gmail.com",
-//   Username: "develop.kioskito@gmail.com",
-//   Password: "Hola!100",
-//   To: "develop.kioskito@gmail.com",
-//   From: "fabiog.inbox@gmail.com",
-//   Subject: "sin token",
-//   Body: "And this is the body",
-// }).then((message) => alert("sin token"));
+  SecureToken : "e63d8d1a-ff6d-4817-a236-186f620fb720",
+  To: "develop.kioskito@gmail.com",
+  From: "fabiog.inbox@gmail.com",
+  Subject: "sin token",
+  Body: "And this is the body",
+}).then((message) => alert("sin token"));
 
 const menuButton = document.getElementById('menu-button') 
 const menu = document.getElementById('menu')
