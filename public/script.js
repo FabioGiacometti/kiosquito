@@ -38,33 +38,41 @@ var gallery = new Vue({
   },
 });
 
-Email.send({
+function sendMail() {
+  Email.send({
+    //   // hay que hacer funcionar el secureToken que provee smtpjs.com.
+    //   // ingresando el host, user y pass me dio "54458174-51c0-424f-a73e-ca40b83400c9"
+    //   // pero asi no me envia el mail
+    // 7989634747DE0098699F5B421FF07F37E153
+    SecureToken: "4588a12a-9458-4471-93fc-46b59b704b4c",
+    To: "develop.kioskito@gmail.com",
+    From: "develop.kioskito@gmail.com",
+    Subject: "sin token",
+    Body: "And this is the body",
+  }).then((message) => alert("sin token"));
+}
 
-  // hay que hacer funcionar el secureToken que provee smtpjs.com.
-  // ingresando el host, user y pass me dio "54458174-51c0-424f-a73e-ca40b83400c9" 
-  // pero asi no me envia el mail
-  
-  SecureToken : "e63d8d1a-ff6d-4817-a236-186f620fb720",
-  To: "develop.kioskito@gmail.com",
-  From: "fabiog.inbox@gmail.com",
-  Subject: "sin token",
-  Body: "And this is the body",
-}).then((message) => alert("sin token"));
+const menuButton = document.getElementById("menu-button");
+const menu = document.getElementById("menu");
+let isMenuShown = false;
 
-const menuButton = document.getElementById('menu-button') 
-const menu = document.getElementById('menu')
-let isMenuShown = false
-
-function handleMenu(){
-  if(!isMenuShown){
-    console.log("click")
-    menuButton.classList.add('is-active')
-    menu.classList.remove('hidden')
-    isMenuShown = true
+function handleMenu() {
+  if (!isMenuShown) {
+    console.log("click");
+    menuButton.classList.add("is-active");
+    menu.classList.add("visto");
+    isMenuShown = true;
   } else {
-    menuButton.classList.remove('is-active')
-    isMenuShown = false
-    menu.classList.add('hidden')
-
+    menuButton.classList.remove("is-active");
+    isMenuShown = false;
+    menu.classList.remove("visto");
   }
 }
+
+var scheme = Math.floor(Math.random() * 360);
+var saturation = Math.floor(Math.random() * 10);
+var body = document.querySelector("#body");
+body.style.setProperty("--color-scheme", scheme + "deg");
+body.style.setProperty("--saturation", saturation);
+console.log("scheme: ", scheme);
+console.log("saturation: ", saturation);

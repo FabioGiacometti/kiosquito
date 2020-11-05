@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,700&family=Playfair+Display:wght@700;900&display=swap");
 
+$randomNumber: random(360);
+
 :root {
   --background-color: #53f3db;
   --background-tilt: #49dbc5;
@@ -10,6 +12,9 @@
   --shadow-normal: 0 5px 2px 3px #00000013;
   --title-font: "Playfair Display";
   --text-font: "Lato";
+  --color-scheme: 180deg;
+  --saturation: 1;
+
 }
 
 *,
@@ -17,6 +22,10 @@ html,
 body {
   scroll-behavior: smooth;
   position: relative;
+}
+
+#body{
+  filter: hue-rotate(var(--color-scheme)) saturate(var(--saturation))
 }
 
 .titulo {
@@ -82,7 +91,7 @@ article {
 }
 
 .menu-button {
-  display: none!important;
+  display: none !important;
   position: absolute;
   top: 0;
   right: 30px;
@@ -92,43 +101,53 @@ article {
   }
 }
 
+.header {
+  background-color: var(--background-color);
+  position: relative;
+  display: flex;
+  z-index: 100;
 
-header {
   @media (max-width: 850px) {
-    .hidden {
-      transform: translateX(100vw);
+    position: fixed;
+    
+    .menu-button {
+      display: block !important;
     }
-    .menu-button{
-      display: block!important;
-    }
-    nav {
-      // position: relative;
-      width: 100vw;
-      height: calc(100vh - 60px);
-      position: fixed;
-      justify-content: flex-start !important;
-      bottom: 0;
-      right: 0%;
-      flex-direction: column;
-      background-color: var(--background-color);
-      z-index: 100;
-      transform: translateX(0vw);
-      transition: transform 300ms ease-in-out;
-      .logo {
-        margin: 50px;
-      }
-      ul {
-        margin: 50px auto !important;
-        // justify-content: space-evenly;
-        text-align: center;
-      }
 
-      .header-link {
-        font-size: 30px;
-      }
+    nav {
+      position: absolute;
+      display: none;
+      left: 0;
+      top: 62px;
+      background-color: red;
+      height: calc(100vh - 200px);
+      z-index: 200;
+      // justify-content: flex-start !important;
+      width: 100vw;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+
+    //   .logo {
+    //     margin: 50px;
+    //   }
+    //   ul {
+    //     margin: 50px auto !important;
+    //     // justify-content: space-evenly;
+    //     text-align: center;
+    //   }
+
+    //   .header-link {
+    //     font-size: 30px;
+    //   }
     }
   }
 }
+
+.visto {
+  display: flex!important
+}
+
 .header-link {
   color: var(--text);
   font-size: 0.9rem;
@@ -236,10 +255,6 @@ section {
   align-items: center;
 }
 
-header {
-  background-color: var(--background-color);
-  position: relative;
-}
 
 nav li a {
   margin-right: 10px;

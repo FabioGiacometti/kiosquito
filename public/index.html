@@ -20,8 +20,8 @@
   <title>Kioskito</title>
 </head>
 
-<body>
-  <header class="headear flex items-center w-full px-16">
+<body id="body">
+  <header class="header items-center w-full px-16">
     <a href="#hero"><img id="header-logo"
         class="logo header-logo"
         src="assets/logo.svg"
@@ -34,8 +34,8 @@
         <span class="hamburger-inner"></span>
       </span>
     </button>
-    <nav class="nav contained flex justify-between items-center hidden" id="menu">
-      <ul class="flex flex-col md:flex-row ml-auto">
+    <nav class="nav contained flex justify-between items-center" id="menu">
+      <ul class="flex flex-col md:flex-row ml-lg-auto">
         <li><a class="header-link"
             href="#propuesta">Propuesta</a></li>
         <li><a class="header-link"
@@ -252,7 +252,7 @@
               <input type="tel"
                 class="text-field"
                 placeholder="Telefono">
-              <button class="button button-even">¡Hablemos!</button>
+              <button class="button button-even" onclick="preventDefault(); sendMail()">¡Hablemos!</button>
             </fieldset>
           </form>
         </article>

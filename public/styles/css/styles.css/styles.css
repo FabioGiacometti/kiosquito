@@ -8,13 +8,18 @@
   --margin: 10px;
   --shadow-normal: 0 5px 2px 3px #00000013;
   --title-font: "Playfair Display";
-  --text-font: "Lato"; }
+  --text-font: "Lato";
+  --color-scheme: 180deg;
+  --saturation: 1; }
 
 *,
 html,
 body {
   scroll-behavior: smooth;
   position: relative; }
+
+#body {
+  filter: hue-rotate(var(--color-scheme)) saturate(var(--saturation)); }
 
 .titulo {
   font-family: var(--title-font), serif;
@@ -79,30 +84,31 @@ article {
   .menu-button:focus {
     outline: none; }
 
-@media (max-width: 850px) {
-  header .hidden {
-    transform: translateX(100vw); }
-  header .menu-button {
-    display: block !important; }
-  header nav {
-    width: 100vw;
-    height: calc(100vh - 60px);
-    position: fixed;
-    justify-content: flex-start !important;
-    bottom: 0;
-    right: 0%;
-    flex-direction: column;
-    background-color: var(--background-color);
-    z-index: 100;
-    transform: translateX(0vw);
-    transition: transform 300ms ease-in-out; }
-    header nav .logo {
-      margin: 50px; }
-    header nav ul {
-      margin: 50px auto !important;
-      text-align: center; }
-    header nav .header-link {
-      font-size: 30px; } }
+.header {
+  background-color: var(--background-color);
+  position: relative;
+  display: flex;
+  z-index: 100; }
+  @media (max-width: 850px) {
+    .header {
+      position: fixed; }
+      .header .menu-button {
+        display: block !important; }
+      .header nav {
+        position: absolute;
+        display: none;
+        left: 0;
+        top: 62px;
+        background-color: red;
+        height: calc(100vh - 200px);
+        z-index: 200;
+        width: 100vw;
+        justify-content: center;
+        display: flex;
+        align-items: center; } }
+
+.visto {
+  display: flex !important; }
 
 .header-link {
   color: var(--text);
@@ -181,10 +187,6 @@ section {
   padding-top: 100px;
   padding-bottom: 100px;
   align-items: center; }
-
-header {
-  background-color: var(--background-color);
-  position: relative; }
 
 nav li a {
   margin-right: 10px;
