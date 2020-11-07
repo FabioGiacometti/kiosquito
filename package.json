@@ -7,7 +7,7 @@
     "test": "npm test",
     "compile:sass": "node-sass public/styles/scss/styles.scss public/styles/css/styles.css",
     "scss": "node-sass --watch public/styles/scss/styles.scss -o public/styles/css/styles.css",
-    "start": "live-server public & npm run scss"
+    "start": "live-server public & npm run scss & npm compile:sass"
   },
   "repository": {
     "type": "git",

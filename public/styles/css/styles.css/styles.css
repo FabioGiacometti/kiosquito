@@ -21,6 +21,10 @@ body {
 #body {
   filter: hue-rotate(var(--color-scheme)) saturate(var(--saturation)); }
 
+  h3{
+    font-size: 32px;
+  }
+
 .titulo {
   font-family: var(--title-font), serif;
   font-size: 108px;
@@ -115,23 +119,33 @@ article {
   font-size: 0.9rem;
   font-family: var(--text-font); }
 
+
+  /*Productos */
+
 #productos table {
   background: white; }
+
 
 tr td:not(:first-child) {
   border-left: 1px solid lightgrey;
   border-right: 1px solid lightgrey; }
+/* acomodar el padding para el ultimo header title ya que tiene 3 renglones de texto*/
+/* table tr:first-child th:last-child img {
+  padding-top: 20px;
+}  */ 
 
 #productos {
   padding-bottom: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /*se aplica al ultimo row de la tabla*/ }
+  /*se aplica al ultimo row de la tabla*/ 
+}
   #productos th.titulo-card {
-    width: 228px; }
-  #productos #productos table td {
-    height: 62px; }
+    width: 228px;
+    text-align: center;
+  }
+
   #productos td {
     padding: 0px 20px; }
   #productos table {
@@ -140,47 +154,70 @@ tr td:not(:first-child) {
     max-width: 80vw;
     border-radius: 15px; }
   #productos td {
-    padding: 12px 20px; }
-  #productos tr,
-  #productos td {
-    position: relative; }
-  #productos .titulo-card {
-    text-align: center;
-    padding-top: 10px; }
-  #productos .titulo-card img {
+    padding: 12px 20px; 
+    font-size: 14px;
+  }
+
+  table .titulo-card img {
     display: inline;
-    padding-top: 20px; }
-  #productos td::before {
+    padding-top: 15px;
+    height: 140px;
+    
+  }
+
+  table .titulo-card:last-child img {
+    padding-top: 25px;
+  }
+  #productos tr td:not(:first-child)::before {
     content: "";
-    width: 100%;
+    width: 1.5%;
     position: absolute;
-    height: 112%;
+    height: 102%;
     left: -2px;
-    box-shadow: 3px 0px 6px -7px rgba(0, 0, 0, 0.5);
+    background-color: #00000012;
+    /* box-shadow: 3px 0px 7px -7px rgb(6 5 5); */
     top: 0px;
-    bottom: 0px; }
+    bottom: 0px;
+    
+  }
+
   #productos tbody > tr:nth-child(7) > td:nth-child(1) {
     padding-bottom: 35px; }
   #productos th.titulo-card {
     width: 228px; }
-  #productos tr th::after {
+  #productos tr th:not(:first-child)::after {
     content: "";
-    width: 100%;
+    width: 1.5%;
     position: absolute;
-    height: 112%;
+    height: 100%;
     left: -2px;
-    box-shadow: 3px 0px 6px -4px rgba(0, 0, 0, 0.3);
+    background-color: #00000012;
+    
     top: 0px;
     bottom: 0px; }
-    #productos tr th::after nav li a::after {
-      position: absolute;
+
+    #productos tr th:not(:first-child)::after {
       content: "";
-      height: 1px;
-      width: 0%;
-      left: 50%;
-      bottom: -6px;
-      background-color: var(--background-tilt);
-      transition: all 200ms; }
+      width: 1.5%;
+      position: absolute;
+      height: 100%;
+      left: -2px;
+      background-color: #08070713;
+      
+      top: 0px;
+      bottom: 0px; }
+
+
+   table tr th{
+      background-color: white;
+    }
+
+   table tr:first-child th:first-child{
+    text-align: left;
+    padding-left: 31px;
+    font-size: 36px;
+    color: var(--title-color);
+   }
 
 section {
   height: auto;
@@ -211,32 +248,10 @@ nav li a:hover::after {
 section:nth-of-type(odd) {
   background-color: var(--background-color); }
 
-/* 
-table{
-  transform: rotate(90deg);
-} */
-/* 
-table, td{
-  position: relative;
-}
-
-table td::after{
-  content: "";
-  position: absolute;
-  height: inherit;
-  width: 2px;
-  background-color: black;
-  right: 0;
-  top: 0;
-  filter: blur(2px);
-} */
 td {
   border: none !important; }
 
-/* tr{
-  box-shadow: 2px 2px 0 0 black;
-  position: relative;
-} */
+
 .gris {
   background-color: gray;
   opacity: 0.5; }
