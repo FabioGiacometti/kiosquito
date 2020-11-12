@@ -17,10 +17,9 @@ html,
 body {
   scroll-behavior: smooth;
   position: relative; 
-}
+  background-color: red !important;}
 
-#body {
-  filter: hue-rotate(var(--color-scheme)) saturate(var(--saturation)); }
+
 
   h3{
     font-size: 32px;
@@ -141,85 +140,77 @@ tr td:not(:first-child) {
   flex-direction: column;
   align-items: center;
   /*se aplica al ultimo row de la tabla*/ 
+}
+  #productos th.titulo-card {
+    width: 228px;
+    text-align: center;
+  }
 
-
-  table {
+  #productos td {
+    padding: 0px 20px; }
+  #productos table {
     position: relative;
     overflow: hidden;
     max-width: 80vw;
-    border-radius: 15px;
+    border-radius: 15px; }
+  #productos td {
+    padding: 12px 20px; 
+    font-size: 14px;
+  }
 
-    th.titulo-card {
-      width: 228px;
-      text-align: center;
+  table .titulo-card img {
+    display: inline;
+    padding-top: 15px;
+    height: 140px;
+    
+  }
 
-      img {
-        display: inline;
-        padding-top: 15px;
-        height: 140px;
-        
-      }
+  table .titulo-card:last-child img {
+    padding-top: 25px;
+  }
+  #productos tr td:not(:first-child)::before {
+    content: "";
+    width: 1.5%;
+    position: absolute;
+    height: 102%;
+    left: -2px;
+    background-color: #00000012;
+    /* box-shadow: 3px 0px 7px -7px rgb(6 5 5); */
+    top: 0px;
+    bottom: 0px;
+    
+  }
 
-      /*acomoda las imagenes y el texto de la ultima card header*/
-      &:last-child img {
-        padding-top: 25px;
-      }
-      
-    }
-
-
-    td {
-      padding: 12px 20px; 
-      font-size: 14px; 
-    }
-
-    tr td:not(:first-child)::before {
-      content: "";
-      width: 1.5%;
-      position: absolute;
-      height: 102%;
-      left: -2px;
-      background-color: #00000012;
-      /* box-shadow: 3px 0px 7px -7px rgb(6 5 5); */
-      top: 0px;
-      bottom: 0px;
-      
-    }
-          
-
-}
-
-
-  
-
-
-
-  #productos 
+  #productos tbody > tr:nth-child(7) > td:nth-child(1) {
+    padding-bottom: 35px; }
+  #productos th.titulo-card {
+    width: 228px; }
+  #productos tr th:not(:first-child)::after {
+    content: "";
+    width: 1.5%;
+    position: absolute;
+    height: 100%;
+    left: -2px;
+    background-color: #00000012;
+    
+    top: 0px;
+    bottom: 0px; }
 
     #productos tr th:not(:first-child)::after {
       content: "";
-      width: 1%;
+      width: 1.5%;
       position: absolute;
-      height: 102%;
+      height: 100%;
       left: -2px;
       background-color: #08070713;
       
       top: 0px;
       bottom: 0px; }
-    #productos tr th::after nav li a::after {
-/*       position: absolute;
-      content: "";
-      height: 1px;
-      width: 0%;
-      left: 50%;
-      bottom: -6px;
-      background-color: var(--background-tilt);
-      transition: all 200ms; 
-   */ } 
+
 
    table tr th{
-     background-color: white;
-   }
+      background-color: white;
+    }
 
    table tr:first-child th:first-child{
     text-align: left;
@@ -257,32 +248,10 @@ nav li a:hover::after {
 section:nth-of-type(odd) {
   background-color: var(--background-color); }
 
-/* 
-table{
-  transform: rotate(90deg);
-} */
-/* 
-table, td{
-  position: relative;
-}
-
-table td::after{
-  content: "";
-  position: absolute;
-  height: inherit;
-  width: 2px;
-  background-color: black;
-  right: 0;
-  top: 0;
-  filter: blur(2px);
-} */
 td {
   border: none !important; }
 
-/* tr{
-  box-shadow: 2px 2px 0 0 black;
-  position: relative;
-} */
+
 .gris {
   background-color: gray;
   opacity: 0.5; }
@@ -401,13 +370,52 @@ tbody tr:nth-child(odd) {
 
 .footer {
   background-color: var(--title-color);
-  display: flex;
-  justify-content: space-evenly;
-  align-items: start;
-  padding: 20px; }
+  color:white;
+
+  padding-top: 40px; }
   .footer img {
     filter: invert(1); }
-  .footer ul {
-    display: block; }
-    .footer ul li a {
-      color: white; }
+  
+    .footer  a img {
+      margin-bottom: 5px;
+      margin-left: -8px;
+  }
+
+  .footer div > p {
+      font-size: 14px;
+      color:white;
+      opacity: 0.5;
+      margin-bottom: 5px;
+    }
+
+    .footer ul li {
+      font-size: 12px;
+    }
+
+    .footer ul.social-icon li:not(:first-child){
+      display:flex;
+      margin-left: 10px;
+
+    }
+
+    .footer ul.social-icon li img{
+      height: 22px;
+    }
+
+
+    .footer ul.social-icon li p{
+      margin-left:10px;
+
+    }
+
+
+    .footer-links-wrapper{
+      display: flex;
+      padding-bottom: 40px;
+    }
+
+    ul.social-icon{
+      display: flex;
+      padding-top: 5px;
+    }
+

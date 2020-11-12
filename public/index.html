@@ -5,9 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet"
-    href="styles\css\styles.css\styles.css">
-
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
   rel="stylesheet">
@@ -15,6 +12,8 @@
   href="https://rsms.me/inter/inter.css">
   <link href="styles/css/styles.css/hamburguer.css"
   rel="stylesheet">
+  <link rel="stylesheet"
+  href="styles\css\style.css">
   <!--  <script src="https://smtpjs.com/v3/smtp.js"> -->
   </script>
   <title>Kioskito</title>
@@ -260,24 +259,66 @@
           alt="nuestra imagen">
       </div>
     </section>
-    <footer class="footer">
-      <a href="#hero"><img src="assets/logo.svg"
-          alt="Logo de Kioskito"></a>
-      <ul class="">
-        <li><a class="footer-link"
-            href="#propuesta">Propuesta</a></li>
-        <li><a class="footer-link"
-            href="#productos">Productos</a></li>
-        <li><a class="footer-link"
-            href="#servicios">Servicios</a></li>
-      </ul>
-      <ul>
-        <li><a class="footer-link"
-            href="#nosotros">Nosotros</a></li>
-        <li><a class="footer-link"
-            href="#contactanos">Contactanos</a></li>
-      </ul>
-    </footer>
+    <footer class="footer ">
+      <div class="contained footer-links-wrapper">
+      
+          <div>
+             <a href="#hero">
+            <img src="assets/logo.svg"
+            alt="Logo de Kioskito">
+          </a>
+            <p>Seguinos en</p>
+            <ul class="social-icon">
+              <li><img src="./assets/icons/social/dribble.png" alt=""> </li>
+              <li>
+                <img src="./assets/icons/social/fb-icon.svg" alt="">
+              </li>
+              <li>
+                <img  src="./assets/icons/social/ig-logo.png" alt="">
+              </li>
+            </ul>
+          </div>
+        <div>
+          <p>Links</p>
+            <ul>
+              <li>
+                <a class="footer-link"
+                href="#propuesta">Propuesta</a>
+              </li>
+              <li><a class="footer-link"
+                  href="#productos">Productos</a>
+                </li>
+              <li><a class="footer-link"
+                  href="#contactanos">Contactanos</a>
+                </li>
+                <li><a class="footer-link"
+                  href="#servicios">Servicios</a>
+                </li>
+                <li>
+                  <a class="footer-link"
+                  href="#nosotros">Nosotros</a>
+                </li>
+            </ul>
+        </div>
+        
+        
+        <div>
+          <p>Ponete en contacto</p>
+            <ul>
+              <li>Kioskito@gmail.com</li>
+              <li>+54 9 11 68620276</li>
+              <li>+54 9 11 68620276</li>
+            </ul>
+        </div>
+
+
+        
+         
+      </div>
+
+    
+      
+      </footer>
   </main>
 
   <script src="../script.js"></script>
