@@ -5,9 +5,9 @@
   "main": "script.js",
   "scripts": {
     "test": "npm test",
-    "compile:sass": "node-sass public/styles/scss/styles.scss public/styles/css/styles.css",
-    "scss": "node-sass --watch public/styles/scss/styles.scss -o public/styles/css/styles.css",
-    "start": "live-server public & npm run scss & npm compile:sass"
+    "sass": "node-sass -w public/styles/scss/styles.scss -o public/styles/css/",
+    "serve": "live-server --open=public",
+    "start":"npm run serve && npm run sass"
   },
   "repository": {
     "type": "git",

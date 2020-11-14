@@ -18,10 +18,8 @@ body {
   scroll-behavior: smooth;
   position: relative; }
 
-
-  h3{
-    font-size: 32px;
-  }
+h3 {
+  font-size: 32px; }
 
 .titulo {
   font-family: var(--title-font), serif;
@@ -50,8 +48,8 @@ article {
   flex-direction: row-reverse; }
 
 .contained {
-  max-width: 900px;
   display: flex;
+  max-width: 1020px;
   align-items: center;
   margin: auto;
   justify-content: space-between;
@@ -83,139 +81,133 @@ article {
   position: absolute;
   top: 0;
   right: 30px; }
-  .menu-button:focus {
-    outline: none; }
+
+.menu-button:focus {
+  outline: none; }
 
 .header {
   background-color: var(--background-color);
-  position: relative;
+      padding: 0% 5%;
+/*   position: relative;
   display: flex;
-  z-index: 100; }
-  @media (max-width: 850px) {
-    .header {
-      position: fixed; }
-      .header .menu-button {
-        display: block !important; }
-      .header nav {
-        position: absolute;
-        display: none;
-        left: 0;
-        top: 62px;
-        background-color: red;
-        height: calc(100vh - 200px);
-        z-index: 200;
-        width: 100vw;
-        justify-content: center;
-        display: flex;
-        align-items: center; } }
+  z-index: 100; */ 
+}
+
+@media (max-width: 850px) {
+/*   .header {
+    position: fixed; } */
+  .header .menu-button {
+    display: block !important; }
+  .header nav {
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 62px;
+    background-color: red;
+    height: calc(100vh - 200px);
+    width: 100vw;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;  } }
 
 .visto {
-  display: flex !important; }
+  display:flex !important;
+  z-index: 200;}
 
 .header-link {
   color: var(--text);
   font-size: 0.9rem;
   font-family: var(--text-font); }
 
-
-  /*Productos */
-
+/*Productos */
 #productos table {
   background: white; }
-
 
 tr td:not(:first-child) {
   border-left: 1px solid lightgrey;
   border-right: 1px solid lightgrey; }
+
 /* acomodar el padding para el ultimo header title ya que tiene 3 renglones de texto*/
 /* table tr:first-child th:last-child img {
   padding-top: 20px;
-}  */ 
-
+}  */
 #productos {
   padding-bottom: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /*se aplica al ultimo row de la tabla*/ 
-}
-  #productos th.titulo-card {
-    width: 228px;
-    text-align: center;
-  }
+  /*se aplica al ultimo row de la tabla*/ }
 
-  #productos td {
-    padding: 0px 20px; }
-  #productos table {
-    position: relative;
-    overflow: hidden;
-    max-width: 80vw;
-    border-radius: 15px; }
-  #productos td {
-    padding: 12px 20px; 
-    font-size: 14px;
-  }
+#productos th.titulo-card {
+  width: 228px;
+  text-align: center; }
 
-  table .titulo-card img {
-    display: inline;
-    padding-top: 15px;
-    height: 140px;
-    
-  }
+#productos td {
+  padding: 0px 20px; }
 
-  table .titulo-card:last-child img {
-    padding-top: 25px;
-  }
-  #productos tr td:not(:first-child)::before {
-    content: "";
-    width: 1.5%;
-    position: absolute;
-    height: 102%;
-    left: -2px;
-    background-color: #00000012;
-    /* box-shadow: 3px 0px 7px -7px rgb(6 5 5); */
-    top: 0px;
-    bottom: 0px;
-    
-  }
+#productos table {
+  position: relative;
+  overflow: hidden;
+  max-width: 80vw;
+  border-radius: 15px; }
 
-  #productos tbody > tr:nth-child(7) > td:nth-child(1) {
-    padding-bottom: 35px; }
-  #productos th.titulo-card {
-    width: 228px; }
-  #productos tr th:not(:first-child)::after {
-    content: "";
-    width: 1.5%;
-    position: absolute;
-    height: 100%;
-    left: -2px;
-    background-color: #00000012;
-    
-    top: 0px;
-    bottom: 0px; }
+#productos td {
+  padding: 12px 20px;
+  font-size: 14px; }
 
-    #productos tr th:not(:first-child)::after {
-      content: "";
-      width: 1.5%;
-      position: absolute;
-      height: 100%;
-      left: -2px;
-      background-color: #08070713;
-      
-      top: 0px;
-      bottom: 0px; }
+table .titulo-card img {
+  display: inline;
+  padding-top: 15px;
+  height: 140px; }
 
+table .titulo-card:last-child img {
+  padding-top: 25px; }
 
-   table tr th{
-      background-color: white;
-    }
+#productos tr td:not(:first-child)::before {
+  content: "";
+  width: 1.5%;
+  position: absolute;
+  height: 102%;
+  left: -2px;
+  background-color: #00000012;
+  /* box-shadow: 3px 0px 7px -7px rgb(6 5 5); */
+  top: 0px;
+  bottom: 0px; }
 
-   table tr:first-child th:first-child{
-    text-align: left;
-    padding-left: 31px;
-    font-size: 36px;
-    color: var(--title-color);
-   }
+#productos tbody > tr:nth-child(7) > td:nth-child(1) {
+  padding-bottom: 35px; }
+
+#productos th.titulo-card {
+  width: 228px; }
+
+#productos tr th:not(:first-child)::after {
+  content: "";
+  width: 1.5%;
+  position: absolute;
+  height: 100%;
+  left: -2px;
+  background-color: #00000012;
+  top: 0px;
+  bottom: 0px; }
+
+#productos tr th:not(:first-child)::after {
+  content: "";
+  width: 1.5%;
+  position: absolute;
+  height: 100%;
+  left: -2px;
+  background-color: #08070713;
+  top: 0px;
+  bottom: 0px; }
+
+table tr th {
+  background-color: white; }
+
+table tr:first-child th:first-child {
+  text-align: left;
+  padding-left: 31px;
+  font-size: 36px;
+  color: var(--title-color); }
 
 section {
   height: auto;
@@ -227,17 +219,19 @@ nav li a {
   margin-right: 10px;
   position: relative;
   transition: all 200ms; }
-  nav li a::after {
-    content: "";
-    height: 1px;
-    width: 0%;
-    position: absolute;
-    bottom: -5px;
-    background-color: var(--title-color);
-    left: 50%;
-    transition: all 200ms; }
-  nav li a:hover {
-    color: var(--title-color); }
+
+nav li a::after {
+  content: "";
+  height: 1px;
+  width: 0%;
+  position: absolute;
+  bottom: -5px;
+  background-color: var(--title-color);
+  left: 50%;
+  transition: all 200ms; }
+
+nav li a:hover {
+  color: var(--title-color); }
 
 nav li a:hover::after {
   width: 100%;
@@ -248,7 +242,6 @@ section:nth-of-type(odd) {
 
 td {
   border: none !important; }
-
 
 .gris {
   background-color: gray;
@@ -359,61 +352,50 @@ tbody tr:nth-child(odd) {
   width: 300px;
   padding: 7px 13px;
   border-radius: 6px; }
-  .text-field:focus {
-    outline: none;
-    border: 2px solid var(--background-tilt);
-    box-shadow: 0 0 3px 1px var(--background-color); }
-  .text-field::placeholder {
-    color: var(--subtitle-color); }
+
+.text-field:focus {
+  outline: none;
+  border: 2px solid var(--background-tilt);
+  box-shadow: 0 0 3px 1px var(--background-color); }
+
+.text-field::placeholder {
+  color: var(--subtitle-color); }
 
 .footer {
   background-color: var(--title-color);
-  color:white;
-
+  color: white;
   padding-top: 40px; }
-  .footer img {
-    filter: invert(2); }
-  
-    .footer  a img {
-      margin-bottom: 5px;
-      margin-left: -8px;
-  }
 
-  .footer div > p {
-      font-size: 14px;
-      color:white;
-      opacity: 0.5;
-      margin-bottom: 5px;
-    }
+.footer img {
+  filter: invert(1); }
 
-    .footer ul li {
-      font-size: 12px;
-    }
+.footer a img {
+  margin-bottom: 5px;
+  margin-left: -8px; }
 
-    .footer ul.social-icon li:not(:first-child){
-      display:flex;
-      margin-left: 10px;
+.footer div > p {
+  font-size: 14px;
+  color: white;
+  opacity: 0.5;
+  margin-bottom: 5px; }
 
-    }
+.footer ul li {
+  font-size: 12px; }
 
-    .footer ul.social-icon li img{
-      height: 22px;
-    }
+.footer ul.social-icon li:not(:first-child) {
+  display: flex;
+  margin-left: 10px; }
 
+.footer ul.social-icon li img {
+  height: 22px; }
 
-    .footer ul.social-icon li p{
-      margin-left:10px;
+.footer ul.social-icon li p {
+  margin-left: 10px; }
 
-    }
+.footer-links-wrapper {
+  display: flex;
+  padding-bottom: 40px; }
 
-
-    .footer-links-wrapper{
-      display: flex;
-      padding-bottom: 40px;
-    }
-
-    ul.social-icon{
-      display: flex;
-      padding-top: 5px;
-    }
-
+ul.social-icon {
+  display: flex;
+  padding-top: 5px; }

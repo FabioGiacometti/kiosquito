@@ -10,45 +10,45 @@
   rel="stylesheet">
   <link rel="stylesheet"
   href="https://rsms.me/inter/inter.css">
-  <link href="styles/css/styles.css/hamburguer.css"
+  <link href="styles/css/hamburguer.css"
   rel="stylesheet">
   <link rel="stylesheet"
-  href="styles\css\style.css">
+  href="styles/css/styles.css">
   <!--  <script src="https://smtpjs.com/v3/smtp.js"> -->
   </script>
   <title>Kioskito</title>
 </head>
 
 <body id="body">
-  <header class="header items-center w-full px-16">
-    <a href="#hero"><img id="header-logo"
-      class="logo header-logo"
-      src="assets/logo.svg"
-      alt="Logo de Kioskito"></a>
-      <button class="hamburger hamburger--collapse menu-button"
-      type="button"
-      onclick="handleMenu()"
-      id="menu-button">
-      <span class="hamburger-box">
-        <span class="hamburger-inner"></span>
-      </span>
-    </button>
-    <nav class="nav contained flex justify-between items-center" id="menu">
-      <ul class="flex flex-col md:flex-row ml-lg-auto">
-        <li><a class="header-link"
-          href="#propuesta">Propuesta</a></li>
+  <header class="header w-full ">
+    <div class="contained">
+      <a href="#hero"><img id="header-logo"
+        class="logo header-logo"
+        src="assets/logo.svg"
+        alt="Logo de Kioskito"></a>
+        <button class="hamburger hamburger--collapse menu-button"
+        type="button"
+        onclick="handleMenu()"
+        id="menu-button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+      <nav class="nav flex justify-between items-center" id="menu">
+        <ul class="flex flex-col md:flex-row ml-lg-auto">
           <li><a class="header-link"
-            href="#productos">Productos</a></li>
-        <li><a class="header-link"
-            href="#servicios">Servicios</a></li>
-        <li><a class="header-link"
-            href="#nosotros">Nosotros</a></li>
-        <li><a class="header-link"
-            href="#contactanos">Contactanos</a></li>
-
-      </ul>
-
-    </nav>
+            href="#propuesta">Propuesta</a></li>
+            <li><a class="header-link"
+              href="#productos">Productos</a></li>
+          <li><a class="header-link"
+              href="#servicios">Servicios</a></li>
+          <li><a class="header-link"
+              href="#nosotros">Nosotros</a></li>
+          <li><a class="header-link"
+              href="#contactanos">Contactanos</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
@@ -321,7 +321,7 @@
       </footer>
   </main>
 
-  <script src="../script.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

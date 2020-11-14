@@ -52,27 +52,40 @@ function sendMail() {
   }).then((message) => alert("sin token"));
 }
 
+document.onload = (function(){
+
+
+
+}())
+
+
+
 const menuButton = document.getElementById("menu-button");
 const menu = document.getElementById("menu");
+
 let isMenuShown = false;
-
-function handleMenu() {
-  if (!isMenuShown) {
-    console.log("click");
-    menuButton.classList.add("is-active");
-    menu.classList.add("visto");
-    isMenuShown = true;
-  } else {
-    menuButton.classList.remove("is-active");
-    isMenuShown = false;
-    menu.classList.remove("visto");
+  function handleMenu() {
+    if (!isMenuShown) {
+      console.log( menuButton.classList);
+      menuButton.classList.add("is-active");
+    
+      menu.classList.add("visto");
+      isMenuShown = true;
+    } else {
+      menuButton.classList.remove("is-active");
+      isMenuShown = false;
+      menu.classList.remove("visto");
+    }
   }
-}
 
-var scheme = Math.floor(Math.random() * 360);
+
+
+
+
+/* var scheme = Math.floor(Math.random() * 360);
 var saturation = Math.floor(Math.random() * 10);
 var body = document.querySelector("#body");
 body.style.setProperty("--color-scheme", scheme + "deg");
 body.style.setProperty("--saturation", saturation);
 console.log("scheme: ", scheme);
-console.log("saturation: ", saturation);
+console.log("saturation: ", saturation); */
