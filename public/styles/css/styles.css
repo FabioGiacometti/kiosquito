@@ -16,7 +16,9 @@
 html,
 body {
   scroll-behavior: smooth;
-  position: relative; }
+  position: relative; 
+
+}
 
 h3 {
   font-size: 32px; }
@@ -49,7 +51,7 @@ article {
 
 .contained {
   display: flex;
-  max-width: 1020px;
+  max-width: 990px;
   align-items: center;
   margin: auto;
   justify-content: space-between;
@@ -80,14 +82,14 @@ article {
   display: none !important;
   position: absolute;
   top: 0;
-  right: 30px; }
+  right: 0px; }
 
 .menu-button:focus {
   outline: none; }
 
 .header {
   background-color: var(--background-color);
-      padding: 0% 5%;
+   /*    padding: 0% 5%; */
 /*   position: relative;
   display: flex;
   z-index: 100; */ 
@@ -101,9 +103,9 @@ article {
   .header nav {
     position: absolute;
     display: none;
-    left: 0;
-    top: 62px;
-    background-color: red;
+    left: -13px;
+    top: 58px;
+    background-color: white;
     height: calc(100vh - 200px);
     width: 100vw;
     z-index: 100;
