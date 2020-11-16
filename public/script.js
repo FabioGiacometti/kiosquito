@@ -52,11 +52,6 @@ function sendMail() {
   }).then((message) => alert("sin token"));
 }
 
-document.onload = (function(){
-
-
-
-}())
 
 
 

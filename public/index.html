@@ -20,7 +20,7 @@
 </head>
 
 <body id="body">
-  <header class="header w-full ">
+  <header class="header">
     <div class="contained">
       <a href="#hero"><img id="header-logo"
         class="logo header-logo"
@@ -207,27 +207,21 @@
         <img src="assets/imagenes/nosotros.png"
           alt="nuestra imagen">
       </div>
-      <ul id="gallery contained"
-        class="gallery">
-        <li v-for="integrante in integrantes"
-          class="quien-card">
-          <img :src="integrante.imagen"
-            alt="avatar"
-            class="card-avatar">
+      <ul id="gallery" class="gallery">
+        <li v-for="integrante in integrantes" class="quien-card">
+          <img :src="integrante.imagen" alt="avatar" class="card-avatar">
           <h3 class="card-nombre">
             {{ integrante.nombre }}
           </h3>
           <h4 class="card-titulo">
             {{ integrante.titulo }}
           </h4>
-          <p class="card-texto">
-            {{ integrante.texto }}
-          </p>
-          <div class="icon-container">
-            <a :href="integrante.linkedin"><img src="assets/imagenes/linkedin.png"
-                alt=""
-                class="card-social"></a>
-          </div>
+            <p class="card-texto">
+              {{ integrante.texto }}
+            </p>
+            <div class="icon-container">
+              <a :href="integrante.linkedin"><img src="assets/imagenes/linkedin.png" alt="" class="card-social"></a>
+            </div>
         </li>
       </ul>
     </section>
@@ -321,7 +315,7 @@
       </footer>
   </main>
 
-  <script src="script.js"></script>
 </body>
+<script src="script.js"></script>
 
 </html>
