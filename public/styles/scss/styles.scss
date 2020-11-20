@@ -95,13 +95,15 @@ article {
   color: var(--subtitle-color); }
 
 
-@media (max-width: 938px){
 
-}
 
-@media (max-width: 850px) {
+@media screen and (max-width: 754px) {
 /*   .header {
     position: fixed; } */
+
+    .hero-image img{ 
+      display: none;
+    }
   .header .menu-button {
     display: block !important; }
   .header nav {
@@ -416,3 +418,10 @@ tbody tr:nth-child(odd) {
 ul.social-icon {
   display: flex;
   padding-top: 5px; }
+
+
+  @media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }
