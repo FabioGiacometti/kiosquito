@@ -7,16 +7,16 @@
     content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
-  rel="stylesheet">
+    rel="stylesheet">
   <link rel="stylesheet"
-  href="https://rsms.me/inter/inter.css">
+    href="https://rsms.me/inter/inter.css">
   <link href="styles/css/hamburguer.css"
-  rel="stylesheet">
+    rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css.map"
-  rel="stylesheet">
+    rel="stylesheet">
 
   <link rel="stylesheet"
-  href="styles/css/styles.css">
+    href="styles/css/styles.css">
   <!--  <script src="https://smtpjs.com/v3/smtp.js"> -->
   </script>
   <title>Kioskito</title>
@@ -26,10 +26,10 @@
   <header class="header">
     <div class="contained navbar-container">
       <a href="#hero"><img id="header-logo"
-        class="logo header-logo"
-        src="assets/logo.svg"
-        alt="Logo de Kioskito"></a>
-        <button class="hamburger hamburger--collapse menu-button"
+          class="logo header-logo"
+          src="assets/logo.svg"
+          alt="Logo de Kioskito"></a>
+      <button class="hamburger hamburger--collapse menu-button"
         type="button"
         onclick="handleMenu()"
         id="menu-button">
@@ -37,76 +37,87 @@
           <span class="hamburger-inner"></span>
         </span>
       </button>
-      <nav class="nav flex justify-between items-center" id="menu">
+      <nav class="nav flex justify-between items-center"
+        id="menu">
         <ul class="flex flex-col md:flex-row ml-lg-auto">
           <li><a class="header-link"
-            href="#propuesta">Propuesta</a></li>
+            href="#propuesta">Hola</a></li> 
             <li><a class="header-link"
-              href="#productos">Productos</a></li>
+              href="#propuesta">Propuesta</a></li>
+          <!-- <li><a class="header-link"
+              href="#productos">Productos</a></li> -->
           <li><a class="header-link"
               href="#servicios">Servicios</a></li>
-          <li><a class="header-link"
-              href="#nosotros">Nosotros</a></li>
-          <li><a class="header-link"
-              href="#contactanos">Contactanos</a></li>
+          <!-- <li><a class="header-link"
+              href="#nosotros">Nosotros</a></li> -->
+          <!-- <li><a class="header-link"
+              href="#contactanos">Contactanos</a></li> -->
         </ul>
       </nav>
     </div>
   </header>
   <main>
     <section id="hero"
-    class="hero  flex flex-col-reverse items-center md:flex-row">
-    <div class="contained flex md:flex-row odd">
-      <article class="article">
-        <h1 class="titulo">¡Hola!</h1>
-        <h2 class="subtitulo">¡Queremos ayudar a tu negocio!</h2>
-        <p class="texto">Somos un equipo de profesionales digitales que ayudamos a empresas de todos los tamaños a
-          digitalizarse para sumar ventas y llegar a más clientes.</p>
-        <button class="button button-odd"
-          onclick="Email.send()">¡Quiero Saber Mas!</button>
-      </article>
-      <img class="hero-image" src="assets/imagenes/hero.png"
-        alt="hero image">
-    </div>
-  </section>
+      class="hero  flex flex-col-reverse items-center md:flex-row">
+      <div class="contained flex md:flex-row odd relative md:items-center">
+        <article class="article relative">
+          <h1 class="titulo">¡Hola!</h1>
+          <h2 class="subtitulo">¡Queremos ayudar a tu negocio!</h2>
+          <p class="texto">Somos un equipo de profesionales digitales que ayudamos a empresas de todos los tamaños a
+            digitalizarse para sumar ventas y llegar a más clientes.</p>
+          <a class="button button-odd py-4 mt-4 inline-block"
+            target="_blank"
+            href="https://api.whatsapp.com/send?phone=5491168620276&text=Hola,%20necesito%20mas%20informacion%20sobre%20sus%20productos%20y%20servicios">¡Quiero
+            Saber Mas</a>
+        </article>
+        <img class="hero-image ilustracion gordo"
+          src="assets/imagenes/hero.png"
+          alt="hero image">
+      </div>
+    </section>
 
-  
-  <section id="propuesta"
-  class="propuesta flex flex-row-reverse">
-  <div class="contained md:flex-row flex">
-    <article class="">
-      <h2 class="subtitulo">Nuestra
-        Propuesta</h2>
-      <p class="texto">Nuestro objetivo es facilitar el proceso de transformacion digital de tu emprendimiento,
-        mediante
-        productos “enlatados” que resuelvan esta integracion con las principales plataformas de presencia en la red,
-        acompañandote en el proceso de adopcion de estas tecnologias.
 
-        De esta forma podes aprovechar este canal para hacer crecer tu negocio, y nosotros estamos para ayudarte a
-        hacer
-        ese paso de la manera mas facil y conveniente, con planes y productos adaptados a tus necesidades.</p>
-    </article>
-    <img src="assets/imagenes/propuesta.png"
-      alt="propuesta pionera">
-  </div>
-</section>
+    <section id="propuesta"
+      class="propuesta flex ">
+      <div class="contained flex md:flex-row-reverse flex-col-reverse items-baseline md:items-center">
+        <article class="md:ml-16">
+          <h2 class="subtitulo">Nuestra
+            Propuesta</h2>
+          <p class="texto">Nuestro objetivo es facilitar el proceso de transformacion digital de tu emprendimiento,
+            mediante
+            productos “enlatados” que resuelvan esta integracion con las principales plataformas de presencia en la red,
+            acompañandote en el proceso de adopcion de estas tecnologias.
 
-<section id="servicios"
-  class="servicios flex">
-  <div class="contained md:flex-row flex">
-    <article class="">
-      <h2 class="subtitulo">Nuestos Servicios</h2>
-      <p class="texto">Si necesitas una solucion a tu medida, te ofrecemos todas nuestras herramientas para mantener
-        tu presencia digital gestionada de forma unificada y coherente. Diseñamos y administramos tu web o
-        E-Commerce,
-        publicidad en facebook, twitter,portales (Mercadolibre, Olx, foros), y E-mail Marketing</p>
-      <button class="button button-even">Saber Mas</button>
-    </article>
-    <img src="assets/imagenes/servicios.png"
-      alt=" nuestros servicios">
-  </div>
-</section>
-<!-- 
+            De esta forma podes aprovechar este canal para hacer crecer tu negocio, y nosotros estamos para ayudarte a
+            hacer
+            ese paso de la manera mas facil y conveniente, con planes y productos adaptados a tus necesidades.</p>
+        </article>
+        <img class="ilustracion"
+          src="assets/imagenes/propuesta.png"
+          alt="propuesta pionera pionero">
+      </div>
+    </section>
+
+    <section id="servicios"
+      class="servicios flex">
+      <div class="contained flex md:flex-row flex-col-reverse items-baseline md:items-center md:-mt-32">
+        <article class="">
+          <h2 class="subtitulo">Nuestos Servicios</h2>
+          <p class="texto">Si necesitas una solucion a tu medida, te ofrecemos todas nuestras herramientas para mantener
+            tu presencia digital gestionada de forma unificada y coherente. Diseñamos y administramos tu web o
+            E-Commerce,
+            publicidad en facebook, twitter,portales (Mercadolibre, Olx, foros), y E-mail Marketing</p>
+          <a class="button button-odd py-4 mt-4 inline-block"
+            target="_blank"
+            href="https://api.whatsapp.com/send?phone=5491168620276&text=Hola,%20necesito%20mas%20informacion%20sobre%20sus%20productos%20y%20servicios">¡Quiero
+            Saber Mas</a>
+        </article>
+        <img class="ilustracion oficinista"
+          src="assets/imagenes/servicios.png"
+          alt=" nuestros servicios">
+      </div>
+    </section>
+    <!-- 
 <section id="contacto"
   class="contacto">
 
@@ -134,15 +145,15 @@
       alt="nuestra imagen">
   </div>
 </section> -->
-<footer class="footer ">
-  <div class="contained footer-links-wrapper">
-  
-      <div>
-         <a href="#hero">
-        <img src="assets/logo.svg"
-        alt="Logo de Kioskito">
-      </a>
-        <!-- <p>Seguinos en</p>
+    <footer class="footer ">
+      <div class="contained footer-links-wrapper flex flex-col md:flex-row">
+
+        <div>
+          <a href="#hero">
+            <img src="assets/logo.svg"
+              alt="Logo de Kioskito">
+          </a>
+          <!-- <p>Seguinos en</p>
         <ul class="social-icon">
           <li><img src="./assets/icons/social/dribble.png" alt=""> </li>
           <li>
@@ -152,48 +163,66 @@
             <img  src="./assets/icons/social/ig-logo.png" alt="">
           </li>
         </ul> -->
-      </div>
-    <div>
-      <p>Links</p>
-        <ul>
-          <li>
-            <a class="footer-link"
-            href="#propuesta">Propuesta</a>
-          </li>
-          <li><a class="footer-link"
-              href="#productos">Productos</a>
-            </li>
-          <li><a class="footer-link"
-              href="#contactanos">Contactanos</a>
-            </li>
-            <li><a class="footer-link"
-              href="#servicios">Servicios</a>
+        </div>
+        <div>
+          <p>Navegar</p>
+          <ul>
+            <li>
+              <a class="footer-link"
+                href="#hero">¡Hola!</a>
             </li>
             <li>
               <a class="footer-link"
-              href="#nosotros">Nosotros</a>
+                href="#propuesta">Propuesta</a>
             </li>
-        </ul>
-    </div>
-    
-    
-    <div>
-      <p>Ponete en contacto</p>
-        <ul>
-          <li>Kioskito@gmail.com</li>
-          <li>+54 9 11 68620276</li>
-          <li>+54 9 11 68620276</li>
-        </ul>
-    </div>
+            <!-- <li><a class="footer-link"
+                href="#productos">Productos</a>
+            </li> -->
+            <!-- <li><a class="footer-link"
+                href="#contactanos">Contactanos</a>
+            </li> -->
+            <li><a class="footer-link"
+                href="#servicios">Servicios</a>
+            </li>
+            <!-- <li>
+              <a class="footer-link"
+                href="#nosotros">Nosotros</a>
+            </li> -->
+          </ul>
+        </div>
 
 
-    
-     
-  </div>
+        <div>
+          <p>Ponete en contacto</p>
+          <ul>
+            <li>
+            <li><img src="/public/assets/imagenes/mail.svg"
+                class="contact-icon phone"
+                alt=""><a href="mailto:desarrollo.kioskito@gmail.com">desarrollo.kioskito@gmail.com</a></li>
+            <li><img src="/public/assets/imagenes/phone.svg"
+                class="contact-icon phone"
+                alt="">
+              <a
+                href="https://api.whatsapp.com/send?phone=5491168620276&text=Hola,%20necesito%20mas%20informacion%20sobre%20sus%20productos%20y%20servicios">+54
+                9 11 68620276</a>
+            </li>
+            <li>
+            <li><img src="/public/assets/imagenes/phone.svg"
+                class="contact-icon phone"
+                alt=""><a
+                href="https://api.whatsapp.com/send?phone=5493517615597&text=Hola,%20necesito%20mas%20informacion%20sobre%20sus%20productos%20y%20servicios">+54
+                9 351 7615 597</a></li>
+          </ul>
+        </div>
 
 
-  
-  </footer>
+
+
+      </div>
+
+
+
+    </footer>
   </main>
 
 </body>
