@@ -56,7 +56,7 @@
   <main>
     <section id="hero"
     class="hero  flex flex-col-reverse items-center md:flex-row">
-    <div class="contained odd">
+    <div class="contained flex md:flex-row odd">
       <article class="article">
         <h1 class="titulo">¡Hola!</h1>
         <h2 class="subtitulo">¡Queremos ayudar a tu negocio!</h2>
@@ -65,7 +65,7 @@
         <button class="button button-odd"
           onclick="Email.send()">¡Quiero Saber Mas!</button>
       </article>
-      <img src="assets/imagenes/hero.png"
+      <img class="hero-image" src="assets/imagenes/hero.png"
         alt="hero image">
     </div>
   </section>
@@ -73,7 +73,7 @@
   
   <section id="propuesta"
   class="propuesta flex flex-row-reverse">
-  <div class="contained">
+  <div class="contained md:flex-row flex">
     <article class="">
       <h2 class="subtitulo">Nuestra
         Propuesta</h2>
@@ -90,99 +90,10 @@
       alt="propuesta pionera">
   </div>
 </section>
-<section id="productos"
-  class="productos ">
-  <div class="contained odd">
-    <article class="flex flex-col">
-      <h2 class="subtitulo">Nuestros Productos</h2>
-      <p class="texto">Hemos curado estos combinados de servicios para que encuentres entre ellos uno que satisfaga
-        la
-        necesidad de presencia online de tu emprendimiento</p>
-    </article>
-    <img src="assets/imagenes/productos.png"
-      alt="nuestros productos">
-  </div>
-
-  <table class="mx-auto contained">
-    <tbody>
-      <!--Header de la tabla  -->
-      <tr>
-        <th>
-          <h3 class="table-header-title">
-            Prestaciónes
-          </h3>
-        </th>
-        <th class="titulo-card ">
-          <img src="assets/imagenes/starter.png"
-            alt="">
-          <h3 class="table-header-title">Starter</h3>
-          <h4 class="table-header-subtitulo">$50.000</h4>
-        </th>
-        <th class="titulo-card">
-          <img src="assets/imagenes/pro.png"
-            alt="">
-          <h3 class="table-header-title">Pro</h3>
-          <h4 class="table-header-subtitulo">$100.000</h4>
-        </th>
-        <th class="titulo-card">
-          <img src="assets/imagenes/senior.png"
-            alt="">
-          <h3 class="table-header-title">Senior</h3>
-          <h4 class="table-header-subtitulo">$100.000
-            <br>
-            + Cuota mensual
-          </h4>
-        </th>
-      </tr>
-      <!-- Row 1 -->
-      <tr>
-        <td>Diseño de marca e identidad corporativa</td>
-        <td class=""></td>
-        <td></td>
-        <td class=""></td>
-      </tr>
-      <!-- Row 2 -->
-      <tr>
-        <td>Diseño Web (Con SEO incluido) con 1 año de hosting incluido</td>
-        <td class=""></td>
-        <td></td>
-        <td class=""></td>
-      </tr>
-      <!-- Row 3 -->
-      <tr>
-        <td>Creacion de perfiles y plantillas para redes sociales.</td>
-        <td class=""></td>
-        <td></td>
-        <td class=""></td>
-      </tr>
-      <!-- Row 4 -->
-      <tr>
-        <td>Reporte mensual de Trafico y actividad en el sitio para toma de desiciones.</td>
-        <td class=""></td>
-        <td></td>
-        <td class=""></td>
-      </tr>
-      <!-- Row 5 -->
-      <tr>
-        <td>Publicidad en Facebook, Twitter, Linkedin y Youtube</td>
-        <td class=""></td>
-        <td></td>
-        <td class=""></td>
-      </tr>
-      <!-- Row 6 -->
-      <tr>
-        <td>Gestion de portales genericos y especificos (inmobiliarios,gastronomicos, turisticos, etc). </td>
-        <td class=""></td>
-        <td></td>
-        <td class=""></td>
-      </tr>
-    </tbody>
-  </table>
-</section>
 
 <section id="servicios"
   class="servicios flex">
-  <div class="contained">
+  <div class="contained md:flex-row flex">
     <article class="">
       <h2 class="subtitulo">Nuestos Servicios</h2>
       <p class="texto">Si necesitas una solucion a tu medida, te ofrecemos todas nuestras herramientas para mantener
@@ -195,40 +106,7 @@
       alt=" nuestros servicios">
   </div>
 </section>
-
-<section id="nosotros"
-  class="nosotros ">
-  <div class="contained odd">
-    <article class="flex flex-col">
-
-      <h2 class="subtitulo">Quienes
-        Somos</h2>
-      <p class="texto">Somos un equipo de pibes copados y todo lo que podamos decir de lindo sobre nosotros
-        <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nostrum illo ab unde, velit cum praesentium
-        facere suscipit vitae ullam nisi repellendus in ipsam officia odio veniam. Obcaecati, iste dicta!</p>
-    </article>
-    <img src="assets/imagenes/nosotros.png"
-      alt="nuestra imagen">
-  </div>
-  <ul id="gallery" class="gallery">
-    <li v-for="integrante in integrantes" class="quien-card">
-      <img :src="integrante.imagen" alt="avatar" class="card-avatar">
-      <h3 class="card-nombre">
-        {{ integrante.nombre }}
-      </h3>
-      <h4 class="card-titulo">
-        {{ integrante.titulo }}
-      </h4>
-        <p class="card-texto">
-          {{ integrante.texto }}
-        </p>
-        <div class="icon-container">
-          <a :href="integrante.linkedin"><img src="assets/imagenes/linkedin.png" alt="" class="card-social"></a>
-        </div>
-    </li>
-  </ul>
-</section>
-
+<!-- 
 <section id="contacto"
   class="contacto">
 
@@ -255,7 +133,7 @@
     <img src="assets/imagenes/nosotros.png"
       alt="nuestra imagen">
   </div>
-</section>
+</section> -->
 <footer class="footer ">
   <div class="contained footer-links-wrapper">
   
@@ -264,7 +142,7 @@
         <img src="assets/logo.svg"
         alt="Logo de Kioskito">
       </a>
-        <p>Seguinos en</p>
+        <!-- <p>Seguinos en</p>
         <ul class="social-icon">
           <li><img src="./assets/icons/social/dribble.png" alt=""> </li>
           <li>
@@ -273,7 +151,7 @@
           <li>
             <img  src="./assets/icons/social/ig-logo.png" alt="">
           </li>
-        </ul>
+        </ul> -->
       </div>
     <div>
       <p>Links</p>
