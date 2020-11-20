@@ -24,6 +24,8 @@ body {
 .header {
   background-color: var(--background-color);
   padding: 20px 0px;
+  z-index: 10;
+  width: 100%;
 }
 .header .menu-button {
   display: none;
@@ -122,8 +124,9 @@ article {
   .header .menu-button {
     display: block !important;
   }
+
   .header nav {
-    position: absolute;
+    position: fixed;
     /* display: none; */
     top: 76px;
     background-color: white;
@@ -137,7 +140,7 @@ article {
   }
 
   .header-link{
-    font-size: 3em;
+    font-size: 3em!important;
     margin-bottom: 27px;
     margin-left: -200px;
     display: block;
