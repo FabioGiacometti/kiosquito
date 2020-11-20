@@ -132,23 +132,29 @@ article {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    right: -104%;
+    right: -100%;
     transition: all 200ms ease-in-out;
+  }
+
+  .header-link{
+    font-size: 3em;
+    margin-bottom: 27px;
+    margin-left: -200px;
+    display: block;
+  }
 }
 
 .visto {
   display: flex !important;
   z-index: 200;
-  right: 0%!important;
+  right: 0% !important;
 }
 
 .header-link {
   color: var(--text);
-  font-size: 3.9rem;
+  font-size: 0.9rem;
   font-family: var(--text-font);
-  margin-bottom: 27px;
-  margin-left: -200px;
-  display: block;
+
 }
 
 /*Productos */
@@ -482,7 +488,7 @@ ul.social-icon {
   padding-top: 5px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 850px) {
   .contained {
     margin: 0 20px;
   }
